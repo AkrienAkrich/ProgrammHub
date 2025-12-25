@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProgrammHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title">ProgrammHub</h1>
+            <input type="text" id="search" class="search-input" placeholder="Поиск программ...">
+            <button id="add-btn" class="add-button" title="Добавить программу">+</button>
+            <button id="rescan-btn" class="rescan-button" title="Обновить список">Обновить</button>
+        </header>
+
+        <!-- Main content -->
+        <div class="main">
+            <!-- Sidebar with categories and games list -->
+            <aside class="sidebar">
+                <details open>
+                    <summary class="sidebar-title">Категории</summary>
+                    <ul id="categories-list" class="categories"></ul>
+                </details>
+                <details open>
+                    <summary class="sidebar-title">Игры</summary>
+                    <ul id="games-list" class="games"></ul>
+                </details>
+            </aside>
+
+            <!-- Detail view -->
+            <section class="content">
+                <div id="detail" class="detail hidden">
+                    <img id="detail-cover" class="big-cover" alt="Обложка">
+                    <h2 id="detail-name"></h2>
+                    <p id="detail-source"></p>
+                    <button id="detail-play" class="play-button">PLAY</button>
+                </div>
+                <div id="empty-state" class="empty-state">
+                    <p>Программы не найдены. Попробуйте обновить список.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
