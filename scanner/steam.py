@@ -94,7 +94,8 @@ def scan_steam():
                         continue
 
                     icon_path = extract_icon("steam", appid)
-                    cover_path = download_cover(appid)
+                    # cover_path = download_cover(appid)
+                    cover_path = None  # Не сохраняем локально
 
                     games.append(Game(
                         id=appid,

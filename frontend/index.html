@@ -19,16 +19,9 @@
 
         <!-- Main content -->
         <div class="main">
-            <!-- Sidebar with categories and games list -->
+            <!-- Sidebar with collapsible categories -->
             <aside class="sidebar">
-                <details open>
-                    <summary class="sidebar-title">Категории</summary>
-                    <ul id="categories-list" class="categories"></ul>
-                </details>
-                <details open>
-                    <summary class="sidebar-title">Игры</summary>
-                    <ul id="games-list" class="games"></ul>
-                </details>
+                <div id="categories-container"></div>
             </aside>
 
             <!-- Detail view -->
@@ -45,6 +38,23 @@
             </section>
         </div>
     </div>
+
+<!-- Modal for adding program -->
+<div id="add-modal" class="modal hidden" style="display: none !important;">
+    <div class="modal-content">
+        <h2>Добавить программу</h2>
+        <input type="text" id="add-name" placeholder="Название программы">
+        <div class="path-input-container">
+            <input type="text" id="add-path" placeholder="Путь к exe/jar/bat" readonly>
+            <button id="browse-btn" class="browse-button">Обзор...</button>
+        </div>
+        <select id="add-category"></select>
+        <div class="modal-buttons">
+            <button id="add-confirm">Добавить</button>
+            <button id="add-cancel">Отмена</button>
+        </div>
+    </div>
+</div>
 
     <script src="script.js"></script>
 </body>
